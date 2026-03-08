@@ -5,6 +5,33 @@ import pytest
 from traveler.core.model_factory import create_model
 
 @pytest.mark.asyncio
+async def test_hotel_search_mcp(hotel_search_mcp):
+    # 1. Arrange: 准备模型和 Agent
+    model = create_model(provider="openai", model_id="gpt-4o")
+    agent = Agent(
+        model=model,
+        name="Test Hotel Search Assistant",
+        tools=[hotel_search_mcp],
+        markdown=True
+    )
+
+    # 2. Act: 发起请求
+    response = await agent.arun("帮我找一下在246 Main Street, Ottawa的酒店。")
+
+    # 3. Assert: 验证结果
+    assert response is not None
+    assert response.content is not None
+
+    # 先断言它不是 None，Pylance 会自动推断后续代码中它一定是 List
+    assert response.tools is not None
+
+    # 验证 Agent 是否真的调用了工具（Agno 的 RunResponse 包含工具调用信息）
+    # 这一步可以确保 Agent 没有在胡编乱造，而是真的去查了酒店
+    assert len(response.tools) > 0
+    hotel_functions = ['airbnb_search', 'airbnb_listing_details']
+    assert any(tool.tool_name and tool.tool_name in hotel_functions for tool in response.tools)
+
+@pytest.mark.asyncio
 async def test_weather_mcp(weather_tools):
     # 1. Arrange: 准备模型和 Agent
     model = create_model(provider="openai", model_id="gpt-4o")
@@ -47,6 +74,7 @@ async def test_google_route_mcp(google_route_tools):
 
     # 2. Act: 发起请求
     response = await agent.arun("从341 Main Street， Ottawa到123 Bank Street， Ottawa？")
+    print("Agent Response:", response)
 
     # 3. Assert: 验证结果
     assert response is not None

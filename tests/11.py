@@ -14,25 +14,27 @@ ClientSession.send_ping = _noop_ping # type: ignore
 
 async def main():
 
-    async with MCPManager(server_names=["google_maps"]) as mcp:
+    async with MCPManager(server_names=["google_maps", "hotel_search"]) as mcp:
 
         maps_tools = mcp.get("google_maps")
+        hotel_mcp = mcp.get("hotel_search")
 
-        if maps_tools is None:
+        if hotel_mcp is None:
             raise RuntimeError("google_maps MCP 未连接")
 
-        print("可用工具:", list(maps_tools.functions.keys()))
+        print("可用工具:", list(hotel_mcp.functions.keys()))
 
         model = create_model(provider="openai", model_id="gpt-4o")
 
         agent = Agent(
             model=model,
-            tools=[maps_tools],
+            tools=[hotel_mcp],
             markdown=True
         )
 
         await agent.aprint_response(
-            "从 341 Main Street, Ottawa 到 123 Bank Street, Ottawa 怎么走？"
+            #"从 341 Main Street, Ottawa 到 123 Bank Street, Ottawa 怎么走？"
+            "帮我找一下在246 Main Street, Ottawa的酒店。"
         )
 
 
