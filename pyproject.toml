@@ -1,0 +1,78 @@
+[project]
+name = "traveler"
+version = "0.1.0"
+description = "企业级旅游规划智能体 - 基于 Agno 框架"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Traveler Team" }]
+
+dependencies = [
+    # ---- Agno Framework ----
+    "agno[all]",
+
+    # ---- LLM Providers ----
+    "openai",
+    "anthropic",
+
+    # ---- Vector DB ----
+    "chromadb",
+    "lancedb",
+    "tantivy",
+
+    # ---- Database ----
+    "sqlalchemy>=2.0",
+    "aiosqlite",
+
+    # ---- Web / API ----
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+
+    # ---- Config & Env ----
+    "pydantic-settings",
+    "python-dotenv",
+
+    # ---- Utilities ----
+    "rich",
+    "typer",
+    "loguru",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "pytest-cov", "ruff", "mypy", "pre-commit"]
+postgres = ["psycopg[binary]", "asyncpg"]
+
+[project.scripts]
+traveler = "traveler.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/traveler"]
+
+# ---- Ruff ----
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["traveler"]
+
+# ---- Pytest ----
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+# ---- MyPy ----
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
