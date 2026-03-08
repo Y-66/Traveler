@@ -13,7 +13,7 @@ async def hotel_search_mcp():
         yield manager.get("hotel_search")
 
 @pytest_asyncio.fixture
-async def weather_tools():
+async def weather_mcp():
     """
     提供天气 MCP 工具的异步 Fixture。
     使用 async with 确保测试完成后连接自动关闭。
@@ -22,7 +22,7 @@ async def weather_tools():
         yield manager.get("weather")
 
 @pytest_asyncio.fixture
-async def google_route_tools():
+async def google_route_mcp():
     """
     提供 Google Route MCP 工具的异步 Fixture。
     使用 async with 确保测试完成后连接自动关闭。

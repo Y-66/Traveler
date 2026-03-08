@@ -32,13 +32,13 @@ async def test_hotel_search_mcp(hotel_search_mcp):
     assert any(tool.tool_name and tool.tool_name in hotel_functions for tool in response.tools)
 
 @pytest.mark.asyncio
-async def test_weather_mcp(weather_tools):
+async def test_weather_mcp(weather_mcp):
     # 1. Arrange: 准备模型和 Agent
     model = create_model(provider="openai", model_id="gpt-4o")
     agent = Agent(
         model=model,
         name="Test Weather Assistant",
-        tools=[weather_tools],
+        tools=[weather_mcp],
         markdown=True
     )
 
@@ -62,13 +62,13 @@ async def test_weather_mcp(weather_tools):
 
 
 @pytest.mark.asyncio
-async def test_google_route_mcp(google_route_tools):
+async def test_google_route_mcp(google_route_mcp):
     # 1. Arrange: 准备模型和 Agent
     model = create_model(provider="openai", model_id="gpt-4o")
     agent = Agent(
         model=model,
         name="Test Google Route Assistant",
-        tools=[google_route_tools],
+        tools=[google_route_mcp],
         markdown=True
     )
 
