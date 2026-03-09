@@ -14,5 +14,6 @@ def create_web_search_mcp() -> MCPTools:
             command="cmd",
             args=["/c", "npx", "-y", "@brave/brave-search-mcp-server", "--transport", "stdio"],
             env=env,
-        )
+        ),
+        timeout_seconds=30,
     )

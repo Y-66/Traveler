@@ -33,72 +33,67 @@ async def _run_chat(
     """异步对话主循环，管理 MCP 连接的完整生命周期"""
     from traveler.core.mcp_manager import MCPManager
 
-    # 1. 建立 MCP 连接
-    mcp_manager = MCPManager()
-    mcp_tools_list: list = []
+    # 所有可用的 MCP 服务
+    all_servers = ["google_maps", "web_search", "weather_search", "hotel_search"]
 
-    if not no_mcp:
+    if no_mcp:
+        # 无 MCP 模式
+        runner = _create_runner(mode, provider, model_id, user_id, mcp_tools=None)
+        await _chat_loop(runner)
+    else:
+        async with MCPManager(all_servers) as mcp:
+            console.print(f"[dim]MCP 已连接: {list(mcp.tools.keys())}[/dim]")
+            runner = _create_runner(mode, provider, model_id, user_id, mcp_tools=mcp.tools)
+            await _chat_loop(runner)
+
+
+def _create_runner(mode, provider, model_id, user_id, mcp_tools):
+    """根据模式创建对应的智能体/团队"""
+    match mode:
+        case "agent":
+            from traveler.agents.travel_planner import create_travel_planner
+            return create_travel_planner(
+                provider=provider,
+                model_id=model_id,
+                user_id=user_id,
+                mcp_tools=mcp_tools,
+            )
+        case "team":
+            from traveler.agents.team import create_travel_team
+            return create_travel_team(
+                provider=provider,
+                model_id=model_id,
+                user_id=user_id,
+                mcp_tools=mcp_tools,
+            )
+        case "workflow":
+            from traveler.workflows.planning_workflow import create_planning_workflow
+            return create_planning_workflow(
+                provider=provider,
+                model_id=model_id,
+                user_id=user_id,
+            )
+        case _:
+            raise ValueError(f"不支持的模式: {mode}")
+
+
+async def _chat_loop(runner) -> None:
+    """交互式对话循环"""
+    while True:
         try:
-            mcp_tools_list = await mcp_manager.connect()
-            console.print(f"[dim]MCP 已连接: {len(mcp_tools_list)} 个服务[/dim]")
-        except Exception as e:
-            console.print(f"[yellow]MCP 连接失败，将以离线模式运行: {e}[/yellow]")
+            user_input = console.input("\n[bold cyan]你: [/bold cyan]")
+        except (EOFError, KeyboardInterrupt):
+            break
 
-    try:
-        # 2. 创建智能体 / 团队 / 工作流
-        match mode:
-            case "agent":
-                from traveler.agents.travel_planner import create_travel_planner
+        if user_input.strip().lower() in ("quit", "exit", "q"):
+            console.print("[yellow]再见！祝旅途愉快！ 🛫[/yellow]")
+            break
 
-                runner = create_travel_planner(
-                    provider=provider,
-                    model_id=model_id,
-                    user_id=user_id,
-                    mcp_tools_list=mcp_tools_list or None,
-                )
-            case "team":
-                from traveler.agents.team import create_travel_team
+        if not user_input.strip():
+            continue
 
-                runner = create_travel_team(
-                    provider=provider,
-                    model_id=model_id,
-                    user_id=user_id,
-                    mcp_tools_list=mcp_tools_list or None,
-                )
-            case "workflow":
-                from traveler.workflows.planning_workflow import create_planning_workflow
-
-                runner = create_planning_workflow(
-                    provider=provider,
-                    model_id=model_id,
-                    user_id=user_id,
-                )
-            case _:
-                console.print(f"[red]不支持的模式: {mode}[/red]")
-                return
-
-        # 3. 交互式对话循环
-        while True:
-            try:
-                user_input = console.input("\n[bold cyan]你: [/bold cyan]")
-            except (EOFError, KeyboardInterrupt):
-                break
-
-            if user_input.strip().lower() in ("quit", "exit", "q"):
-                console.print("[yellow]再见！祝旅途愉快！ 🛫[/yellow]")
-                break
-
-            if not user_input.strip():
-                continue
-
-            console.print()
-            await runner.aprint_response(user_input, stream=True)
-
-    finally:
-        # 4. 确保关闭所有 MCP 连接
-        if mcp_manager.tools:
-            await mcp_manager.close()
-            console.print("[dim]MCP 连接已关闭[/dim]")
+        console.print()
+        await runner.aprint_response(user_input, stream=True)
 
 
 # ---------------------------------------------------------------------------

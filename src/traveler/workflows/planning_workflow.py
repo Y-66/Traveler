@@ -35,7 +35,6 @@ def create_planning_workflow(
         provider=provider,
         model_id=model_id,
         user_id=user_id,
-        enable_mcp=False,
     )
 
     workflow = Workflow(

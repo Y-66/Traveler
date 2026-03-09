@@ -1,4 +1,4 @@
-"""旅行研究智能体 - 使用网页搜索和天气 MCP 收集目的地信息"""
+"""住宿顾问智能体 - 使用酒店搜索 MCP 推荐住宿方案"""
 
 from __future__ import annotations
 
@@ -8,48 +8,43 @@ from typing import Any
 from agno.agent import Agent
 from agno.skills import LocalSkills, Skills
 
-from traveler.agents.prompts import RESEARCHER_INSTRUCTIONS
+from traveler.agents.prompts import ACCOMMODATION_ADVISOR_INSTRUCTIONS
 from traveler.core.database import get_agent_db
-from traveler.core.knowledge import get_travel_knowledge
 from traveler.core.model_factory import create_model
 
 SKILLS_DIR = Path(__file__).resolve().parent.parent / "skills"
 
 
-def create_researcher(
+def create_accommodation_advisor(
     provider: str | None = None,
     model_id: str | None = None,
     mcp_tools: dict[str, Any] | None = None,
 ) -> Agent:
-    """创建旅行研究智能体
+    """创建住宿顾问智能体
 
     Args:
         provider: 模型提供商
         model_id: 模型 ID
-        mcp_tools: MCP 工具字典 {"web_search": tool, "weather_search": tool, ...}
+        mcp_tools: MCP 工具字典 {"hotel_search": tool, ...}
     """
     model = create_model(provider=provider, model_id=model_id)
     db = get_agent_db()
-    knowledge = get_travel_knowledge()
 
     tools: list = []
     if mcp_tools:
-        for name in ("web_search", "weather_search"):
-            tool = mcp_tools.get(name)
-            if tool:
-                tools.append(tool)
+        tool = mcp_tools.get("hotel_search")
+        if tool:
+            tools.append(tool)
 
     skills = Skills(loaders=[LocalSkills(str(SKILLS_DIR / "local-expert"))])
 
     return Agent(
-        name="TravelResearcher",
-        role="目的地研究专家，使用搜索和天气工具收集最新信息",
+        name="AccommodationAdvisor",
+        role="住宿顾问，使用酒店搜索工具推荐合适的住宿方案",
         model=model,
-        instructions=RESEARCHER_INSTRUCTIONS,
+        instructions=ACCOMMODATION_ADVISOR_INSTRUCTIONS,
         tools=tools,
         skills=skills,
-        knowledge=knowledge,
-        search_knowledge=True,
         db=db,
         markdown=True,
     )

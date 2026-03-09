@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Any
 
 from agno.agent import Agent
 from agno.skills import LocalSkills, Skills
@@ -22,16 +23,16 @@ def create_travel_planner(
     model_id: str | None = None,
     user_id: str = "default",
     session_id: str | None = None,
-    mcp_tools_list: list | None = None,
+    mcp_tools: dict[str, Any] | None = None,
 ) -> Agent:
-    """创建旅行规划主智能体
+    """创建旅行规划主智能体（单 Agent 模式，集成所有能力）
 
     Args:
         provider: 模型提供商
         model_id: 模型 ID
         user_id: 用户 ID（用于 Memory 隔离）
         session_id: 会话 ID（用于 Session 持久化）
-        mcp_tools_list: 已连接的 MCPTools 列表（由调用方管理生命周期）
+        mcp_tools: MCP 工具字典 {"google_maps": tool, "web_search": tool, ...}
     """
     model = create_model(provider=provider, model_id=model_id)
     db = get_agent_db()
@@ -40,10 +41,10 @@ def create_travel_planner(
     # 构建工具列表
     tools: list = [TravelTools()]
 
-    if mcp_tools_list:
-        tools.extend(mcp_tools_list)
+    if mcp_tools:
+        tools.extend(mcp_tools.values())
 
-    # 加载 Skills
+    # 加载所有 Skills
     skills = Skills(loaders=[LocalSkills(str(SKILLS_DIR))])
 
     agent = Agent(

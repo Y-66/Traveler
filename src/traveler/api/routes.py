@@ -9,6 +9,9 @@ from traveler.api.schemas import ChatRequest, ChatResponse
 
 router = APIRouter(tags=["travel"])
 
+# 所有可用的 MCP 服务
+ALL_MCP_SERVERS = ["google_maps", "web_search", "weather_search", "hotel_search"]
+
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest) -> ChatResponse:
@@ -20,68 +23,59 @@ async def chat(request: ChatRequest) -> ChatResponse:
 
     logger.info("收到请求: mode={} | user={}", request.mode, request.user_id)
 
-    # 建立 MCP 连接
-    mcp_manager = MCPManager()
-    mcp_tools_list: list = []
     try:
-        mcp_tools_list = await mcp_manager.connect()
-    except Exception as e:
-        logger.warning("MCP 连接失败，以离线模式处理: {}", e)
+        async with MCPManager(ALL_MCP_SERVERS) as mcp:
+            mcp_tools = mcp.tools if mcp.tools else None
 
-    try:
-        match request.mode:
-            case "agent":
-                from traveler.agents.travel_planner import create_travel_planner
+            match request.mode:
+                case "agent":
+                    from traveler.agents.travel_planner import create_travel_planner
 
-                agent = create_travel_planner(
-                    provider=request.provider,
-                    model_id=request.model_id,
-                    user_id=request.user_id,
-                    session_id=request.session_id,
-                    mcp_tools_list=mcp_tools_list or None,
-                )
-                response = await agent.arun(request.message)
-                content = response.content if response.content else ""
+                    agent = create_travel_planner(
+                        provider=request.provider,
+                        model_id=request.model_id,
+                        user_id=request.user_id,
+                        session_id=request.session_id,
+                        mcp_tools=mcp_tools,
+                    )
+                    response = await agent.arun(request.message)
+                    content = response.content if response.content else ""
 
-            case "team":
-                from traveler.agents.team import create_travel_team
+                case "team":
+                    from traveler.agents.team import create_travel_team
 
-                team = create_travel_team(
-                    provider=request.provider,
-                    model_id=request.model_id,
-                    user_id=request.user_id,
-                    session_id=request.session_id,
-                    mcp_tools_list=mcp_tools_list or None,
-                )
-                response = await team.arun(request.message)
-                content = response.content if response.content else ""
+                    team = create_travel_team(
+                        provider=request.provider,
+                        model_id=request.model_id,
+                        user_id=request.user_id,
+                        session_id=request.session_id,
+                        mcp_tools=mcp_tools,
+                    )
+                    response = await team.arun(request.message)
+                    content = response.content if response.content else ""
 
-            case "workflow":
-                from traveler.workflows.planning_workflow import create_planning_workflow
+                case "workflow":
+                    from traveler.workflows.planning_workflow import create_planning_workflow
 
-                workflow = create_planning_workflow(
-                    provider=request.provider,
-                    model_id=request.model_id,
-                    user_id=request.user_id,
-                )
-                response = workflow.run(request.message)
-                content = response.content if response.content else ""
+                    workflow = create_planning_workflow(
+                        provider=request.provider,
+                        model_id=request.model_id,
+                        user_id=request.user_id,
+                    )
+                    response = workflow.run(request.message)
+                    content = response.content if response.content else ""
 
-            case _:
-                raise HTTPException(status_code=400, detail=f"不支持的模式: {request.mode}")
+                case _:
+                    raise HTTPException(status_code=400, detail=f"不支持的模式: {request.mode}")
 
-        return ChatResponse(
-            content=content,
-            session_id=request.session_id,
-            metadata={"mode": request.mode},
-        )
+            return ChatResponse(
+                content=content,
+                session_id=request.session_id,
+                metadata={"mode": request.mode},
+            )
 
     except HTTPException:
         raise
     except Exception as e:
         logger.error("处理请求失败: {}", e)
         raise HTTPException(status_code=500, detail=str(e))
-    finally:
-        # 确保关闭 MCP 连接
-        if mcp_manager.tools:
-            await mcp_manager.close()
