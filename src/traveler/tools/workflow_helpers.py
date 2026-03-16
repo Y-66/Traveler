@@ -130,8 +130,8 @@ def prepare_route(step_input: StepInput) -> StepOutput:
 
     content = (
         f"{context}\n\n"
-        f"## 参考：目的地研究报告\n{research[:1500]}\n\n"
-        f"请根据以上信息，规划详细的交通路线方案。"
+        f"## 参考：目的地研究报告\n{research}\n\n"
+        f"请根据以上信息，规划详细的交通路线方案。请不要遗漏任何有用的景点、交通、时间等信息。"
     )
 
     return StepOutput(content=content)
@@ -148,9 +148,9 @@ def prepare_planning(step_input: StepInput) -> StepOutput:
 
     content = (
         f"{context}\n\n"
-        f"## 目的地研究报告摘要\n{research[:2000]}\n\n"
-        f"## 路线规划报告摘要\n{route[:2000]}\n\n"
-        f"请根据以上旅行需求和研究结果，发挥你的专业能力完成分析。"
+        f"## 目的地研究报告摘要\n{research}\n\n"
+        f"## 路线规划报告摘要\n{route}\n\n"
+        f"请根据以上旅行需求和研究结果，发挥你的专业能力完成住宿规划。请确保利用所有提供的数据，包括具体路线和地点。"
     )
 
     return StepOutput(content=content)
@@ -168,10 +168,10 @@ def prepare_budget(step_input: StepInput) -> StepOutput:
 
     content = (
         f"{context}\n\n"
-        f"## 参考：目的地研究\n{research[:1000]}\n\n"
-        f"## 参考：路线规划\n{route[:1000]}\n\n"
-        f"## 参考：住宿推荐\n{accommodation[:1000]}\n\n"
-        f"请根据以上信息，进行详细的预算分析。"
+        f"## 参考：目的地研究\n{research}\n\n"
+        f"## 参考：路线规划\n{route}\n\n"
+        f"## 参考：住宿推荐\n{accommodation}\n\n"
+        f"请根据以上信息，进行详细的预算分析。确保不要遗漏交通、住宿、餐饮或门票等任何涉及经费支出的细节项。"
     )
 
     return StepOutput(content=content)
@@ -190,11 +190,11 @@ def prepare_validation(step_input: StepInput) -> StepOutput:
     content = (
         f"请验证以下旅行方案的完整性和合理性：\n\n"
         f"## 用户需求\n{json.dumps(intent, ensure_ascii=False, indent=2)}\n\n"
-        f"## 目的地研究\n{research[:2000]}\n\n"
-        f"## 路线规划\n{route[:2000]}\n\n"
-        f"## 住宿推荐\n{accommodation[:2000]}\n\n"
-        f"## 预算分析\n{budget[:2000]}\n\n"
-        f"请根据你的专业角色，直接基于以上方案内容进行审查，输出发现的问题和建议。"
+        f"## 目的地研究\n{research}\n\n"
+        f"## 路线规划\n{route}\n\n"
+        f"## 住宿推荐\n{accommodation}\n\n"
+        f"## 预算分析\n{budget}\n\n"
+        f"请根据你的专业角色，直接基于以上方案内容进行详细审查。不要丢失原来的任何有效信息，并给出综合建议。"
     )
 
     return StepOutput(content=content)
@@ -219,8 +219,9 @@ def prepare_report(step_input: StepInput) -> StepOutput:
         f"## 住宿推荐报告\n{accommodation}\n\n"
         f"## 预算分析报告\n{budget}\n\n"
         f"## 方案验证结果\n{validation}\n\n"
-        f"请整合以上所有信息，按照报告模板生成一份结构清晰、内容完整的旅行报告。"
-        f"如果验证结果中有问题或建议，请在报告中进行修正和说明。"
+        f"请整合以上所有信息，按照报告模板生成一份结构清晰、内容丰富且精美的Markdown旅行报告。\n"
+        f"如果验证结果中有问题或建议，请在报告中进行修正和说明。\n"
+        f"非常重要：不要漏掉具体时间、每日行程细节、花费明细、预订建议与各类参考链接，要做到可以直接落地执行。"
     )
 
     return StepOutput(content=content)
