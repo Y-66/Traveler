@@ -1,6 +1,37 @@
-# 🌍 Traveler - Enterprise Travel Planning Agent System / 企业级旅游规划智能体
+# 🌍 Agno-Based Travel Planning Agent System / 基于Agno的旅游规划智能体
 
-基于 [Agno](https://docs.agno.com) 框架构建的企业级旅游规划智能体系统。集成 MCP、Skills、Memory、Knowledge、Team 等能力，提供个性化的旅行规划服务。
+[![English](https://img.shields.io/badge/Language-English-blue)](#english-version) [![中文](https://img.shields.io/badge/Language-%E4%B8%AD%E6%96%87-red)](#%E4%B8%AD%E6%96%87%E7%89%88)
+
+---
+
+<a id="english-version"></a>
+# English Version
+
+**Traveler** is an enterprise-grade travel planning intelligent agent system built entirely upon the [Agno](https://docs.agno.com) framework. By integrating advanced functionalities including **MCP (Model Context Protocol)**, **Skills**, **Memory**, **Knowledge Bases**, **Agent Teams**, and **Workflows**, Traveler provides highly customized, comprehensive, and up-to-date travel planning services.
+
+
+<img src="./public/workflow_chart.jpeg" width="500">
+
+<img src="./public/validation_team.jpeg" width="250">
+
+**Result**: 
+- **English**: [Report presentaion](./public/report_eng.md)
+
+- **Chinese**: [报告展示](./public/report_zh.md)
+
+
+## ✨ Core Features
+
+| Feature | Description |
+|---------|-------------|
+| **Agent** | Travel planner agent based on Agno, capable of complex tool calling, multi-turn dialogue, and autonomous reasoning. |
+| **Team Collaboration** | Multi-agent collaboration model: orchestrates a *Planner*, *Researcher*, and *Budget Analyst* to work together seamlessly. |
+| **Workflow** | Structured pipeline execution: Research (Information Gathering) → Budgeting → Itinerary Planning. |
+| **MCP Integration** | Connects to external MCP servers to fetch real-time Weather, generic Web Search, Hotel integrations, and Google Route analysis. |
+| **Skills plugins** | Specialized skill modules (Agno Skills) for *Travel Planning*, *Local Expertise*, *Intent Analysis*, and *Budget Optimization*. |
+| **Memory System** | Automatically retains and retrieves user preferences and interaction history for fully personalized sessions. |
+| **Knowledge Base** | RAG (Retrieval-Augmented Generation) functionality supported by ChromaDB/LanceDB locally to store and query travel guide documents. |
+| **Custom Tools** | Built-in toolkit tailored for flight, hotel, and attraction search scenarios. |
 
 ## 🏗️ Architecture & Structure
 
