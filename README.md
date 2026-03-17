@@ -10,9 +10,9 @@
 **Traveler** is an enterprise-grade travel planning intelligent agent system built entirely upon the [Agno](https://docs.agno.com) framework. By integrating advanced functionalities including **MCP (Model Context Protocol)**, **Skills**, **Memory**, **Knowledge Bases**, **Agent Teams**, and **Workflows**, Traveler provides highly customized, comprehensive, and up-to-date travel planning services.
 
 
-<img src="./public/workflow_chart.jpeg" width="500">
+<img src="./public/workflow_chart.jpeg" width="600">
 
-<img src="./public/validation_team.jpeg" width="250">
+<img src="./public/validation_team.jpeg" width="300">
 
 **Result**: 
 - **English**: [Report presentaion](./public/report_eng.md)
