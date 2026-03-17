@@ -58,7 +58,7 @@ async def main():
         # 执行工作流
         try:
             await workflow.aprint_response(
-                input="帮我规划一个从北京到东京的5天旅行，预算中等，2个人，喜欢美食和文化体验。",
+                input="从上海出发，计划在韩国玩3天，东京玩4天，预算约2万元，两人喜欢美食和文化体验。",
                 stream=True,
                 markdown=True,
                 show_step_details=True,

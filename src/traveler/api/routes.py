@@ -61,8 +61,10 @@ async def chat(request: ChatRequest) -> ChatResponse:
                         provider=request.provider,
                         model_id=request.model_id,
                         user_id=request.user_id,
+                        session_id=request.session_id,
+                        mcp_tools=mcp_tools,
                     )
-                    response = workflow.run(request.message)
+                    response = await workflow.arun(request.message)
                     content = response.content if response.content else ""
 
                 case _:

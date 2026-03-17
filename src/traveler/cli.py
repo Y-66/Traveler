@@ -72,6 +72,7 @@ def _create_runner(mode, provider, model_id, user_id, mcp_tools):
                 provider=provider,
                 model_id=model_id,
                 user_id=user_id,
+                mcp_tools=mcp_tools,
             )
         case _:
             raise ValueError(f"不支持的模式: {mode}")
