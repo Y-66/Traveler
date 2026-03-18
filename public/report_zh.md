@@ -23,8 +23,8 @@
 ![Gyeongbokgung Palace](https://media.istockphoto.com/id/1676101015/photo/gyeongbokgung-palace-in-sunset-is-beautiful-seoul-south-korea.jpg?s=612x612&w=0&k=20&c=QmJ5axXRBX31-7X502XHhYxyiNsPpkt6WxrgX224WbA=)
 ![Gyeongbokgung Palace](https://busanpedia.com/wp-content/uploads/2021/08/seoul-city-view-gyeongbokgung-palace-1024x683.jpg)
 - **[09:00]** **抵达仁川国际机场**：前往酒店办理入住。
-- **[11:00]** **[景福宫](https://goo.gl/maps/VLuwZik2c4n)**：参观历史宫殿并观看换岗仪式。（时长：2小时；门票：₩3,000）
-- **[13:00]** **[明洞](https://goo.gl/maps/dYfV8FWeqht)**：享用街头美食（辣炒年糕、炸鸡）。（时长：2-3小时）
+- **[11:00]** **[景福宫](https://maps.google.com/?cid=10029593693201569270)**：参观历史宫殿并观看换岗仪式。（时长：2小时；门票：₩3,000）
+- **[13:00]** **[明洞](https://maps.google.com/?cid=4270375483740491276)**：享用街头美食（辣炒年糕、炸鸡）。（时长：2-3小时）
   
 🚇 **交通：** 乘机场铁路（AREX）约40分钟到首尔站，再换乘地铁3号线。
 
@@ -33,9 +33,9 @@
 ### 第2天：首尔文化探索
 ![Hongdae Street Art](https://images.trvl-media.com/place/6159390/ea30951e-bbeb-451b-8b4e-0a6b8b926320.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh)
 ![Hongdae Street Art](https://hosting.photobucket.com/albums/bb28/syb1175/Ten-ele-ven/Seoul-0644-130322_zps72fbed41.jpg)
-- **[10:00]** **[弘大](https://goo.gl/maps/7Zybpz1pdrp)**：欣赏街头艺术与表演。（时长：2小时）
-- **[12:30]** **[南山塔](https://goo.gl/maps/qhpgJx9uP8y)**：观景拍照。（时长：1小时）
-- **[14:00]** **[梨泰院](https://goo.gl/maps/TMRB8s1Vghv)**：在多元文化街区体验交流氛围。（时长：2小时，晚餐于当地餐厅）
+- **[10:00]** **[弘大](https://maps.google.com/?cid=14349369460367289050)**：欣赏街头艺术与表演。（时长：2小时）
+- **[12:30]** **[南山塔](https://maps.google.com/?cid=6699200636580889253)**：观景拍照。（时长：1小时）
+- **[14:00]** **[梨泰院](https://maps.google.com/?cid=4185980164961320936)**：在多元文化街区体验交流氛围。（时长：2小时，晚餐于当地餐厅）
 
 ---
 
@@ -43,9 +43,9 @@
 ![Asakusa Temple](https://images.squarespace-cdn.com/content/v1/560dbc25e4b0969564758eb5/1554356198029-BVTF8RZC1KRZTLNLOSII/Asakusa+Temple+Tokyo+Japan+++www.thetravelpockets.com)
 ![Asakusa Temple](https://images.pexels.com/photos/29531032/pexels-photo-29531032/free-photo-of-bustling-asakusa-temple-in-tokyo-at-sunset.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
 - **[09:00]** **飞往东京**：清晨出发，航程约2小时。
-- **[12:00]** **[浅草寺](https://goo.gl/maps/Q3DqiU36kXB2)**：文化参访（时长：1小时）。
-- **[13:30]** **[仲见世商店街](https://goo.gl/maps/4SwwRFtHyyg)**：品尝传统小吃。（时长：1小时）。
-- **[15:00]**  **[筑地场外市场](https://goo.gl/maps/2pZ3Czvr5Yr)**：晚餐享用新鲜寿司。（时长：1-2小时）。
+- **[12:00]** **[浅草寺](https://maps.google.com/?cid=7785923974874169613)**：文化参访（时长：1小时）。
+- **[13:30]** **[仲见世商店街](https://maps.google.com/?cid=5851620788043619772)**：品尝传统小吃。（时长：1小时）。
+- **[15:00]**  **[筑地场外市场](https://maps.google.com/?cid=11704332758705177180)**：晚餐享用新鲜寿司。（时长：1-2小时）。
 
 🚇 **交通：** 从仁川（ICN）直飞成田（NRT），再乘成田特快前往东京市区。
 
@@ -54,8 +54,8 @@
 ### 第4天：东京文化日
 ![Tokyo Tower](https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2020/03/tokyo-tower-zozoji-temple-AP-1024x600.jpg)
 ![Tokyo Tower](https://t4.ftcdn.net/jpg/00/75/83/37/360_F_75833732_N6Z77bDMO4aGWuJbCRqXnPN8UB4AhQMv.jpg)
-- **[10:00]** **[皇居](https://goo.gl/maps/zRQeJVuV5uZf)**：文化参访（时长：1小时）。
-- **[12:00]** **[涩谷](https://goo.gl/maps/x64Cz2w8LPZ2)**：购物与青年文化体验。（时长：3小时）。
+- **[10:00]** **[皇居](https://maps.google.com/?cid=15067460005103824311)**：文化参访（时长：1小时）。
+- **[12:00]** **[涩谷](https://maps.google.com/?cid=17374000821978228343)**：购物与青年文化体验。（时长：3小时）。
 - **[16:00]** 在附近享用本地风味晚餐。
 
 ---
@@ -63,8 +63,8 @@
 ### 第5天：东京美食探险
 ![Tsukiji Market Sushi](https://whereandwander.com/wp-content/uploads/2016/04/Tsukiji-Waiting-In-Line-For-Sushi-Dai.jpg)
 ![Tsukiji Market Sushi](https://media.gettyimages.com/id/2187091401/photo/eating-sushi-at-the-famous-historic-tsukiji-fish-market-tokyo.jpg?s=612x612&w=0&k=20&c=TcqjrGV5w7ZF4gVsmGhkf0bc6iuR6L2aGOuaHQcbSWg=)
-- **[08:00]** **[筑地市场](https://goo.gl/maps/bLP2b3GnWVEy)**：享用新鲜寿司早餐（时长：2小时）。
-- **[10:30]** **[台场](https://goo.gl/maps/HRRzcSv4G1V)**：购物与娱乐体验。（时长：3小时）。
+- **[08:00]** **[筑地市场](https://maps.google.com/?cid=11704332758705177180)**：享用新鲜寿司早餐（时长：2小时）。
+- **[10:30]** **[台场](https://maps.google.com/?cid=8790616497012609209)**：购物与娱乐体验。（时长：3小时）。
 - **[16:00]** 在**新宿**居酒屋享用晚餐。
 
 ---

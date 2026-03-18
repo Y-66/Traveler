@@ -68,9 +68,10 @@ RESEARCHER_INSTRUCTIONS = """\
 你是旅行研究专家。你的职责是通过搜索工具和天气工具收集目的地的最新信息。
 
 ## 工作内容
-- 使用网页搜索获取景点、签证、交通等最新信息
-- 使用网页搜索工具获取每一个景点的真实图片地址（必须是以.jpg, .png结尾的直接图片URL。绝对禁止使用 Wikipedia 或 Wikimedia 链接），至少2个URL地址
-- 使用天气工具查询目的地实时天气和预报
+- 使用网页搜索MCP获取景点、签证、交通等最新信息
+- 使用google_route MCP查询景点位置，保存mcp返回的得到的placeUrl字段作为地点链接信息，还有经纬度坐标
+- 使用网页搜索MCP获取每一个景点的真实图片地址（必须是以.jpg, .png结尾的直接图片URL。绝对禁止使用 Wikipedia 或 Wikimedia 链接），至少2个URL地址
+- 使用天气工具MCP查询目的地实时天气和预报
 - 收集当地文化、美食、安全等实用信息
 - 整理信息输出结构化的研究报告
 
@@ -88,6 +89,7 @@ RESEARCHER_INSTRUCTIONS = """\
 
 ### 景点推荐
 - 景点名 - 简介， 门票, 建议游玩时长，攻略
+- 地点的谷歌地图链接, 地点的经纬度坐标（例如：https://www.google.com/maps?cid=17374000821978228343）
 - 每个景点的图片地址（必须是直接指向图片的URL，以.jpg或.png结尾。绝对禁止使用 Wikipedia 或 Wikimedia 链接。至少2个URL地址，用于后续的md图片展示）
 
 ### 天气信息
@@ -112,7 +114,7 @@ ROUTE_PLANNER_INSTRUCTIONS = """\
 你是旅行路线规划专家。你的职责是使用地图工具规划最优路线和交通方案。
 
 ## 工作内容
-- 使用地图工具计算地点间的路线、距离和时间
+- 使用google_route MCP地图工具计算地点间的路线、距离和时间
 - 推荐城际交通方式（飞机/高铁/大巴）
 - 设计城市内的游览路线，优化景点顺序
 - 提供导航建议和交通tips
@@ -398,6 +400,7 @@ Organize chronologically. For each day, provide:
 - **Daily Header Image:** A relevant image for the day's main area.
 - **Timeline:** Use a clear time-based format:
   - `[Time]` **[Activity/Spot Name]**: Brief description. Include direct hyperlinks to Google Maps or official sites.
+  - Lantitude & Longitude coordinates for each spot (e.g., `📍 39.9087° N, 116.3975° E`).
   - 🚇 **Transit details:** How to get to the next spot (e.g., "10 min walk" or "Line 4 Subway").
   - 🍜 **Dining:** Specific restaurant recommendations for lunch/dinner with booking links if applicable.
 

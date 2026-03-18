@@ -23,8 +23,8 @@
 ![Gyeongbokgung Palace](https://media.istockphoto.com/id/1676101015/photo/gyeongbokgung-palace-in-sunset-is-beautiful-seoul-south-korea.jpg?s=612x612&w=0&k=20&c=QmJ5axXRBX31-7X502XHhYxyiNsPpkt6WxrgX224WbA=)
 ![Gyeongbokgung Palace](https://busanpedia.com/wp-content/uploads/2021/08/seoul-city-view-gyeongbokgung-palace-1024x683.jpg)
 - **[09:00]** **Arrival at Incheon International Airport**: Proceed to hotel for check-in.
-- **[11:00]** **[Gyeongbokgung Palace](https://goo.gl/maps/VLuwZik2c4n)**: Explore the historic palace and watch the changing of the guard. (Duration: 2 hours; Ticket: ₩3,000)
-- **[13:00]** **[Myeongdong](https://goo.gl/maps/dYfV8FWeqht)**: Enjoy street food delights (Tteokbokki, Fried Chicken). (Duration: 2-3 hours)
+- **[11:00]** **[Gyeongbokgung Palace](https://maps.google.com/?cid=10029593693201569270)**: Explore the historic palace and watch the changing of the guard. (Duration: 2 hours; Ticket: ₩3,000)
+- **[13:00]** **[Myeongdong](https://maps.google.com/?cid=4270375483740491276)**: Enjoy street food delights (Tteokbokki, Fried Chicken). (Duration: 2-3 hours)
   
 🚇 **Transit:** 40 min via Airport Railroad (AREX) to Seoul Station, then transfer to Line 3 Subway.
 
@@ -33,9 +33,9 @@
 ### Day 2: Cultural Exploration in Seoul
 ![Hongdae Street Art](https://images.trvl-media.com/place/6159390/ea30951e-bbeb-451b-8b4e-0a6b8b926320.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh)
 ![Hongdae Street Art](https://hosting.photobucket.com/albums/bb28/syb1175/Ten-ele-ven/Seoul-0644-130322_zps72fbed41.jpg)
-- **[10:00]** **[Hongdae](https://goo.gl/maps/7Zybpz1pdrp)**: Enjoy art and street performances. (Duration: 2 hours)
-- **[12:30]** **[Namsan Tower](https://goo.gl/maps/qhpgJx9uP8y)**: Scenic views and photo opportunities. (Duration: 1 hour)
-- **[14:00]** **[Itaewon](https://goo.gl/maps/TMRB8s1Vghv)**: Cultural exchange in vibrant neighborhood. (Duration: 2 hours, dinner at local restaurant)
+- **[10:00]** **[Hongdae](https://maps.google.com/?cid=14349369460367289050)**: Enjoy art and street performances. (Duration: 2 hours)
+- **[12:30]** **[Namsan Tower](https://maps.google.com/?cid=6699200636580889253)**: Scenic views and photo opportunities. (Duration: 1 hour)
+- **[14:00]** **[Itaewon](https://maps.google.com/?cid=4185980164961320936)**: Cultural exchange in vibrant neighborhood. (Duration: 2 hours, dinner at local restaurant)
 
 ---
 
@@ -43,9 +43,9 @@
 ![Asakusa Temple](https://images.squarespace-cdn.com/content/v1/560dbc25e4b0969564758eb5/1554356198029-BVTF8RZC1KRZTLNLOSII/Asakusa+Temple+Tokyo+Japan+++www.thetravelpockets.com)
 ![Asakusa Temple](https://images.pexels.com/photos/29531032/pexels-photo-29531032/free-photo-of-bustling-asakusa-temple-in-tokyo-at-sunset.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
 - **[09:00]** **Flight to Tokyo**: Depart early for a 2-hour flight.
-- **[12:00]** **[Senso-ji Temple](https://goo.gl/maps/Q3DqiU36kXB2)**: Cultural exploration (Duration: 1 hour).
-- **[13:30]** **[Nakamise Street](https://goo.gl/maps/4SwwRFtHyyg)**: Try traditional snacks. (Duration: 1 hour).
-- **[15:00]**  **[Tsukiji Outer Market](https://goo.gl/maps/2pZ3Czvr5Yr)**: Dinner with fresh sushi. (Duration: 1-2 hours).
+- **[12:00]** **[Senso-ji Temple](https://maps.google.com/?cid=7785923974874169613)**: Cultural exploration (Duration: 1 hour).
+- **[13:30]** **[Nakamise Street](https://maps.google.com/?cid=5851620788043619772)**: Try traditional snacks. (Duration: 1 hour).
+- **[15:00]**  **[Tsukiji Outer Market](https://maps.google.com/?cid=11704332758705177180)**: Dinner with fresh sushi. (Duration: 1-2 hours).
 
 🚇 **Transit:** Direct flight from ICN to NRT, then take the Narita Express to Tokyo Center.
 
@@ -54,8 +54,8 @@
 ### Day 4: Cultural Day in Tokyo
 ![Tokyo Tower](https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2020/03/tokyo-tower-zozoji-temple-AP-1024x600.jpg)
 ![Tokyo Tower](https://t4.ftcdn.net/jpg/00/75/83/37/360_F_75833732_N6Z77bDMO4aGWuJbCRqXnPN8UB4AhQMv.jpg)
-- **[10:00]** **[Imperial Palace](https://goo.gl/maps/zRQeJVuV5uZf)**: Cultural visit (Duration: 1 hour).
-- **[12:00]** **[Shibuya](https://goo.gl/maps/x64Cz2w8LPZ2)**: Shopping and youth culture. (Duration: 3 hours).
+- **[10:00]** **[Imperial Palace](https://maps.google.com/?cid=15067460005103824311)**: Cultural visit (Duration: 1 hour).
+- **[12:00]** **[Shibuya](https://maps.google.com/?cid=17374000821978228343)**: Shopping and youth culture. (Duration: 3 hours).
 - **[16:00]** Dinner nearby featuring local cuisine.
 
 ---
@@ -63,8 +63,8 @@
 ### Day 5: Culinary Adventure in Tokyo
 ![Tsukiji Market Sushi](https://whereandwander.com/wp-content/uploads/2016/04/Tsukiji-Waiting-In-Line-For-Sushi-Dai.jpg)
 ![Tsukiji Market Sushi](https://media.gettyimages.com/id/2187091401/photo/eating-sushi-at-the-famous-historic-tsukiji-fish-market-tokyo.jpg?s=612x612&w=0&k=20&c=TcqjrGV5w7ZF4gVsmGhkf0bc6iuR6L2aGOuaHQcbSWg=)
-- **[08:00]** **[Tsukiji Market](https://goo.gl/maps/bLP2b3GnWVEy)**: Enjoy fresh sushi breakfast (Duration: 2 hours).
-- **[10:30]** **[Odaiba](https://goo.gl/maps/HRRzcSv4G1V)**: Experience shopping and fun activities. (Duration: 3 hours).
+- **[08:00]** **[Tsukiji Market](https://maps.google.com/?cid=11704332758705177180)**: Enjoy fresh sushi breakfast (Duration: 2 hours).
+- **[10:30]** **[Odaiba](https://maps.google.com/?cid=8790616497012609209)**: Experience shopping and fun activities. (Duration: 3 hours).
 - **[16:00]** Dinner in **Shinjuku** at an izakaya.
 
 ---
